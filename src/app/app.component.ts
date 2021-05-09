@@ -12,9 +12,9 @@ export class AppComponent  implements OnInit{
   numbers;result;
   ngOnInit() {
      // Called after the constructor and called  after the first ngOnChanges() 
-     const numbers = range(1, 7);
+     const numbers = range(1, 800);
 const result = numbers.pipe(count(i => i % 2 === 1));
-  result.subscribe(x => console.log(x));
+  result.subscribe(value => console.log({value}));
   }
 
 
